@@ -3,7 +3,7 @@ import { themeSettings } from "./themes";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./componants/Navbar";
+import Navbar from "./components/Navbar";
 const App = () => {
   const theme = useMemo(() => createTheme(themeSettings), []);
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box width="100%" height="100%" padding="1rem 3rem 0rem 3rem">
-            <Navbar />
+            <Navbar name="med ali" />
             <Routes>
               <Route path="/" element={<div>Home</div>} />
               <Route

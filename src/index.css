@@ -20,3 +20,8 @@ body,
   height: 100%;
   width: 100%;
 }
+
+.logo {
+  width: 2rem;
+  aspect-ratio: 1/1;
+}
