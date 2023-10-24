@@ -1,53 +1,10 @@
 import { Box, useMediaQuery } from "@mui/material";
-import DashboardBox from "@/components/DashboardBox";
+import RowOne from "./RowOne";
+import RowTwo from "./RowTwo";
+import RowThree from "./RowThree";
+import { gridTemplateLg, gridTemplateSm } from "@/utils/grids";
 
-const gridTemplateLg = `
-"a b c"
-"a b c"
-"a b c"
-"a b f"
-"d e f"
-"d e f"
-"d h i"
-"g h i"
-"g h j"
-"g h j"
-`;
-const gridTemplateSm = `
-"a"
-"a"
-"a"
-"a"
-"b"
-"b"
-"b"
-"b"
-"c"
-"c"
-"c"
-"d"
-"d"
-"d"
-"e"
-"e"
-"f"
-"f"
-"f"
-"g"
-"g"
-"g"
-"h"
-"h"
-"h"
-"h"
-"i"
-"i"
-"j"
-"j"
-`;
-
-type Props = {};
-const Dashboard = (props: Props) => {
+const Dashboard = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1200px)");
   return (
     <Box
@@ -70,16 +27,9 @@ const Dashboard = (props: Props) => {
             }
       }
     >
-      <DashboardBox bgcolor="#fff" gridArea="a"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="b"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="c"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="d"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="e"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="f"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="g"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="h"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="i"></DashboardBox>
-      <DashboardBox bgcolor="#fff" gridArea="j"></DashboardBox>
+      <RowOne />
+      <RowTwo />
+      <RowThree />
     </Box>
   );
 };
