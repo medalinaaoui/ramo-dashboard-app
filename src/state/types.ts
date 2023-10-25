@@ -34,3 +34,13 @@ export interface KpiResponse {
   updatedAt: string;
   monthlyData: monthlyObj[];
 }
+export interface ProductResponse {
+  createdAt: string;
+  id: string;
+  _id: string;
+  __v: number;
+  updatedAt: string;
+  price: number;
+  expense: number;
+  transactions: string[];
+}
