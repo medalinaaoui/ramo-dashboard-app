@@ -104,8 +104,6 @@ const RowThree = () => {
     }
   }, [KpisData]);
 
-  console.log("productsData:", productsData);
-  console.log("TransactionData:", TransactionData);
   return (
     <>
       <DashboardBox bgcolor="#fff" gridArea="g">
