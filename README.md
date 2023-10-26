@@ -1,27 +1,31 @@
-# React + TypeScript + Vite
+# Ramo Kpi Project - React TypeScript Full Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a full-stack web application that utilizes React, TypeScript, and recharts library to display data fetched from a Node.js server. The data is presented in various charts, making it a powerful tool for visualizing and analyzing your data.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Demo](#demo)
+- [Features](#features)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+You can access the live demo of this project at [ramo-dashboard-app.vercel.app](https://ramo-dashboard-app.vercel.app/). Explore the various charts and see how it visualizes your data.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Data Visualization**: The project utilizes popular charting libraries like [recharts](https://recharts.org/en-US) to create various types of charts, such as bar charts, line charts, and pie charts, making it easy to understand and analyze your data.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- **React and TypeScript**: The frontend is built with React and TypeScript, ensuring type safety and robust development.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Node.js Server**: The backend server is implemented in Node.js, which fetches the data to be displayed in the charts.
+
+- **API Endpoints**: The server provides API endpoints to fetch data for the charts, and the frontend communicates with the server to fetch and display the data.
+
+- **Responsive Design**: The application is designed to work well on both desktop and mobile devices.
+
+## Deployment
+
+- **Frontend**: The frontend of this project is deployed on Vercel. You can access it at [ramo-dashboard-app.vercel.app](https://ramo-dashboard-app.vercel.app/).
+
+- **Server**: The backend server is hosted on Fly.io, providing reliable server infrastructure.
+
+- **Database**: Data for this project is stored in MongoDB.
