@@ -129,7 +129,7 @@ const RowOne = () => {
               type="monotone"
               yAxisId="left"
               dataKey="profit"
-              stroke={palette.tertiary[500]}
+              stroke="#8884d8"
               dot={true}
             />
             <Line

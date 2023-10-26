@@ -13,7 +13,7 @@ import FlexBetween from "@/components/FlexBetween";
 
 const RowThree = () => {
   const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const pieColors = ["#076050", "#71f5de"];
   const { data: TransactionData } = useGetTransactionQuery();
   const { data: productsData } = useGetProductsQuery();
   const { data: KpisData } = useGetKpisQuery();
@@ -192,7 +192,10 @@ const RowThree = () => {
                   dataKey="value"
                 >
                   {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={pieColors[index]} />
+                    <Cell
+                      key={`cell-${index}-${entry}`}
+                      fill={pieColors[index]}
+                    />
                   ))}
                 </Pie>
               </PieChart>
@@ -209,12 +212,12 @@ const RowThree = () => {
         <Box
           height="15px"
           margin="1.25rem 1rem 0.4rem 1rem"
-          bgcolor={palette.primary[800]}
+          bgcolor="#076050"
           borderRadius="1rem"
         >
           <Box
             height="15px"
-            bgcolor={palette.primary[600]}
+            bgcolor="#0ebfa0"
             borderRadius="1rem"
             width="40%"
           ></Box>

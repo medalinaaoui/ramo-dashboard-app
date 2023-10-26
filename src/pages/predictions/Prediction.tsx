@@ -115,7 +115,7 @@ const Predictions = () => {
             <Line
               strokeDasharray="5 5"
               dataKey="Predicted Revenue"
-              stroke={palette.secondary[500]}
+              stroke="#f2b455"
             />
           )}
         </LineChart>

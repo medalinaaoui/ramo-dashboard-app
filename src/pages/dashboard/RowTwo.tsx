@@ -28,7 +28,7 @@ const pieData = [
 
 const RowTwo = () => {
   const { palette } = useTheme();
-  const pieColors = [palette.primary[800], palette.primary[300]];
+  const pieColors = ["#076050", "#71f5de"];
   const { data: productsData } = useGetProductsQuery();
   const { data } = useGetKpisQuery();
 
@@ -83,7 +83,7 @@ const RowTwo = () => {
               type="monotone"
               yAxisId="left"
               dataKey="Operational Expenses"
-              stroke={palette.tertiary[500]}
+              stroke="#8884d8"
               dot={true}
             />
             <Line
@@ -123,14 +123,14 @@ const RowTwo = () => {
               dataKey="value"
             >
               {pieData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={pieColors[index]} />
+                <Cell key={`cell-${index}-${entry}`} fill={pieColors[index]} />
               ))}
             </Pie>
           </PieChart>
 
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
             <Typography variant="h5">Target Sales</Typography>
-            <Typography m=".3rem 0" variant="h3" color={palette.primary[300]}>
+            <Typography m=".3rem 0" variant="h3" color="#71f5de">
               83
             </Typography>
             <Typography variant="h6">
