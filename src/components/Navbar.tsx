@@ -4,15 +4,12 @@ import { Box, Typography, useTheme } from "@mui/material";
 import FlexBetween from "./FlexBetween";
 import { useState } from "react";
 
-type NavbarPros = {
-  name: string;
-};
-const Navbar = ({ name }: NavbarPros) => {
+const Navbar = () => {
   const { palette } = useTheme();
   const [selected, setSelected] = useState("dashboard");
 
   return (
-    <FlexBetween padding="0rem 6rem" color={palette.grey[300]}>
+    <FlexBetween className="navBar" color={palette.grey[300]}>
       <Link
         to="/"
         style={{

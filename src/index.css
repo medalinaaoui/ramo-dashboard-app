@@ -46,3 +46,12 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.navBar {
+  padding: 0rem 6rem;
+}
+@media (max-width: 768px) {
+  .navBar {
+    padding: 0rem;
+  }
+}
