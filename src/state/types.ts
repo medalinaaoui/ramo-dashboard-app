@@ -44,3 +44,10 @@ export interface ProductResponse {
   expense: number;
   transactions: string[];
 }
+export interface TransactionResponse {
+  _id: string;
+  buyer: string;
+  __v: number;
+  amount: number;
+  productIds: string[];
+}

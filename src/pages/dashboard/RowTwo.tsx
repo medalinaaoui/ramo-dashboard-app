@@ -2,15 +2,12 @@ import DashboardBox from "@/components/DashboardBox";
 import { useGetProductsQuery, useGetKpisQuery } from "@/state/api";
 import BoxHeader from "@/components/BoxHeader";
 import {
-  // AreaChart,
-  // Area,
   XAxis,
   YAxis,
   Tooltip,
   ResponsiveContainer,
   Line,
   CartesianGrid,
-  // Legend,
   LineChart,
   Pie,
   PieChart,
@@ -18,15 +15,10 @@ import {
   Scatter,
   ScatterChart,
   ZAxis,
-  // Bar,
-  // BarChart,
-  // Rectangle,
 } from "recharts";
 import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from "react";
 import FlexBetween from "@/components/FlexBetween";
-
-// type Props = {};
 
 const pieData = [
   { name: "Group A", value: 400 },
@@ -39,7 +31,6 @@ const RowTwo = () => {
   const pieColors = [palette.primary[800], palette.primary[300]];
   const { data: productsData } = useGetProductsQuery();
   const { data } = useGetKpisQuery();
-  console.log("productsData:", productsData);
 
   const revenueExpenses = useMemo(() => {
     return (
@@ -55,10 +46,6 @@ const RowTwo = () => {
       )
     );
   }, [data]);
-
-  const operationalExpenses = useMemo(() => {
-    return productsData;
-  }, [productsData]);
 
   const ProductExpenseData = useMemo(() => {
     return (
