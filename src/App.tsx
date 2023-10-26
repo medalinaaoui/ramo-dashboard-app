@@ -14,7 +14,7 @@ const App = () => {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Box width="100%" height="100%" padding="1rem 3rem 0rem 3rem">
-            <Navbar name="med ali" />
+            <Navbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/predictions" element={<Prediction />} />
